@@ -1,2 +1,2 @@
 # cpp-beginner-programs
-A collection of "beginner level c++ programs and exercises"
+A collection of beginner to intermediate level C++ programs for practice and learning
