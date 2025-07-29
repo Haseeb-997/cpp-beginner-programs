@@ -13,6 +13,36 @@ int differenceMarkspSubject(int a, int b)
     return a - b;
 }
 
+int Sumof9thmarks(int arr[8])
+{
+    int sum = 0;
+    for (int i = 0; i < 8; i++)
+    {
+        sum += arr[i];
+    }
+    return sum;   
+}
+
+int Sumof10thmarks(int arr[8])
+{
+    int sum = 0;
+    for (int i = 0; i < 8; i++)
+    {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+int Sumof9th10thmarks(int arr[8])
+{
+    int sum = 0;
+    for (int i = 0; i < 8; i++)
+    {
+        sum += arr[i];
+    }
+    return sum;
+}
+
 int main()
 {
     system("cls");
@@ -24,14 +54,14 @@ int main()
 
     for (int i = 0; i < 8; i++)
     {
-        cout << "Enter your " << sub[i] << " marks you have scored in 9th class: ";
+        cout << "Enter your 9th " << sub[i] << " marks: ";
         cin >> ninth_marks[i];
     }
     cout << endl;
 
     for (int i = 0; i < 8; i++)
     {
-        cout << "Enter your " << sub[i] << " marks you have scored in 10th class: ";
+        cout << "Enter your 10th " << sub[i] << " marks: ";
         cin >> tenth_marks[i];
     }
     cout << endl;
@@ -54,14 +84,16 @@ int main()
         }
         else if (diff_mar_per_sub[i] > 0)
         {
-            cout << "Improved by" << diff_mar_per_sub[i] << " marks" << endl;
+            cout << "Improved by " << diff_mar_per_sub[i] << " marks" << endl;
         }
         else
         {
-            cout << "Decreased by" << diff_mar_per_sub[i] * -1 << "marks less than that in 9th class" << endl;
+            cout << "Decreased by " << diff_mar_per_sub[i] * -1 << "marks less than that in 9th class" << endl;
         }
     }
     cout << "_______________________________________________________________________________________________________________" << endl << endl;
+
+    cout << left << setw(20) << "Total" << setw(17) << Sumof9thmarks(ninth_marks) << setw(17) << Sumof10thmarks(tenth_marks) << setw(17) << Sumof9th10thmarks(tot_mar_per_sub) <<endl << endl;
 
     system("pause");
     return 0;
