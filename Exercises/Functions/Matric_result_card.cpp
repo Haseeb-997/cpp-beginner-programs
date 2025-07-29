@@ -81,7 +81,7 @@ int main()
 
     string sub[8] = {"English", "Urdu", "Maths", "Physics", "Chemistry", "Pakistan Studies", "Islamiat"};
 
-    if (group == "biology" || group == "computer")
+    if ((group == "biology") || (group == "computer"))
     {
         sub[7] = (group == "biology") ? "Biology" : "Computer";
         cout << endl;
