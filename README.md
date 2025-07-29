@@ -12,7 +12,3 @@ This repository contains various beginner to intermediate-level C++ programs. Th
 - `Simple-Programs/`: Basic console programs
 - `Loops-and-Arrays/`: Exercises using loops and arrays
 - `Functions/`: Programs with user-defined functions
-
-## How to Run
-
-Use any C++ compiler like g++ or an IDE like Code::Blocks or Visual Studio Code.
