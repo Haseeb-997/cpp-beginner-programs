@@ -65,7 +65,7 @@ int main()
 {
     system("cls");
 
-    cout << "***Program that give you complete analysis of your 9th and 10th class***\n";
+    cout << "***Program that give you complete analysis of your 9th and 10th class (of ICS group)***\n";
 
     string sub[8] = {"English", "Urdu", "Maths", "Physics", "Chemistry", "Pakistan Studies", "Islamiat", "Computer"};
     int ninth_marks[8], tenth_marks[8], tot_mar_per_sub[8], diff_mar_per_sub[8];
