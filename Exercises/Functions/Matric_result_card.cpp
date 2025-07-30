@@ -160,11 +160,11 @@ int main()
     float ninthPercent = Perof9thmarks(float(sum9mar)), tenthPercent = Perof10thmarks(float(sum10mar)), totPercent = Perof9th10thmarks(float(sum910mar)), diff_of_per_9_10 = PercentDiff(ninthPercent, tenthPercent);
 
     // Obtained Marks
-    cout << left << setw(20) << "Obtained Marks" << setw(17) << sum9mar << setw(17) << sum10mar << setw(17) << sum910mar << endl;
+    cout << left << setw(20) << "Obtained Marks" << setw(17) << sum9mar << setw(17) << sum10mar << sum910mar << endl;
     // Total Marks
-    cout << left << setw(20) << "Total Marks" << setw(17) << "550" << setw(17) << "550" << setw(17) << "1100" << endl;
+    cout << left << setw(20) << "Total Marks" << setw(17) << "550" << setw(17) << "550" << "1100" << endl;
     // Percentages
-    cout << left << setw(20) << "Percentage" << setw(17) << ninthPercent << setw(17) << tenthPercent << setw(17) << totPercent << endl << endl;
+    cout << left << setw(20) << "Percentage" << setw(17) << ninthPercent << setw(17) << tenthPercent << totPercent << endl << endl;
 
     if (diff_of_per_9_10 == 0)
     {
