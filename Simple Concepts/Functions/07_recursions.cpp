@@ -3,9 +3,13 @@ using namespace std;
 
 int fact(int a)
 {
-    if (a <= 1)
+    if ((a == 1) || (a == 0))
     {
         return 1;
+    }
+    else if (a < 0)
+    {
+        return 0;        
     }
     else
     {
@@ -19,7 +23,11 @@ int main()
     int n;
     cout << "Enter the number: ";
     cin >> n;
-    cout << "The factorial of " << n << " is " << fact(n) << endl;
+    if (!(fact(n)))
+    {
+        cout << "Invalid Input" << endl;
+    }
+    else cout << "The factorial of " << n << " is " << fact(n) << endl;
 
     system("pause");
     return 0;
