@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip> // to include setw
-#define MAX 75 // "Hey computer, whenever you see the word MAX, just pretend it's the number 75."
+#define MAX 75     // "Hey computer, whenever you see the word MAX, just pretend it's the number 75."
 using namespace std;
 // Sum total marks in 9th and 10th class in each subject
 int totalMarkspSubject(int a, int b)
@@ -69,12 +69,13 @@ float PercentDiff(int a, int b)
 int main()
 {
     system("cls");
-    
+
     cout << "***Program that give you complete analysis of your Matric Result***\n\n";
     // Subjects array
     string sub[8] = {"English", "Urdu", "Maths", "Physics", "Chemistry", "Pakistan Studies", "Islamiat"};
     // Declaration of variable and arrays--function describe in names
     int group, ninth_marks[8], tenth_marks[8], tot_mar_per_sub[8], diff_mar_per_sub[8];
+
     // Choosing group
     cout << "Group Confirmation\n";
     do
@@ -84,13 +85,13 @@ int main()
         cout << "Enter your choice(1 or 2): ";
         cin >> group;
         cout << endl;
-
-        if ((group == 1) || (group == 2))
+        if ((group == 1) || (group == 2)) // Ternary operator
         {
             sub[7] = (group == 1) ? "Biology" : "Computer";
             break;
         }
-        else cout << "Wrong input...\n\n";
+        else
+            cout << "Wrong input...\n\n";
     } while (1);
     // 9th marks stored in array
     for (int i = 0; i < 8; i++)
@@ -103,7 +104,8 @@ int main()
             {
                 break;
             }
-            else cout << "Wrong Input...\n";
+            else
+                cout << "Wrong Input...\n";
         } while (1);
     }
     cout << endl;
@@ -118,7 +120,8 @@ int main()
             {
                 break;
             }
-            else cout << "Wrong Input...\n";
+            else
+                cout << "Wrong Input...\n";
         } while (1);
     }
     cout << endl;
@@ -130,6 +133,7 @@ int main()
     }
     // Headings
     cout << left << setw(20) << "Subjects" << setw(17) << "9th Marks" << setw(17) << "10th Marks" << setw(17) << "Obtained Marks" << setw(17) << "Analysis" << endl;
+    cout << right << setw(69) << "in each subject" << endl;
     cout << "_____________________________________________________________________________________________" << endl << endl;
     // Contents
     for (int i = 0; i < 8; i++)
@@ -149,31 +153,31 @@ int main()
         }
     }
     cout << "_____________________________________________________________________________________________" << endl;
+    
     // Variables Declaration--function describe in names
     int sum9mar = Sumof9thmarks(ninth_marks), sum10mar = Sumof10thmarks(tenth_marks), sum910mar = Sumof9th10thmarks(tot_mar_per_sub);
+    // Variables Declaration--function describe in names
+    float ninthPercent = Perof9thmarks(float(sum9mar)), tenthPercent = Perof10thmarks(float(sum10mar)), totPercent = Perof9th10thmarks(float(sum910mar)), diff_of_per_9_10 = PercentDiff(ninthPercent, tenthPercent);
+
     // Obtained Marks
     cout << left << setw(20) << "Obtained Marks" << setw(17) << sum9mar << setw(17) << sum10mar << setw(17) << sum910mar << endl;
     // Total Marks
     cout << left << setw(20) << "Total Marks" << setw(17) << "550" << setw(17) << "550" << setw(17) << "1100" << endl;
-    // Variables Declaration--function describe in names
-    float ninthPercent = Perof9thmarks(float(sum9mar)), tenthPercent = Perof10thmarks(float(sum10mar)), totPercent = Perof9th10thmarks(float(sum910mar));
     // Percentages
     cout << left << setw(20) << "Percentage" << setw(17) << ninthPercent << setw(17) << tenthPercent << setw(17) << totPercent << endl << endl;
-    // Variables Declaration--function describe in names
-    float diff_of_per_9_10 = PercentDiff(ninthPercent, tenthPercent);
 
     if (diff_of_per_9_10 == 0)
     {
-        cout << "------------------------------" << "No Change in overall percentage" << "------------------------------" << endl << endl;
+        cout << "--------------------------------" << "No Change in overall percentage" << "--------------------------------" << endl << endl;
     }
 
     else if (diff_of_per_9_10 > 0)
     {
-        cout << "----------------------" << "Improved by " << diff_of_per_9_10 << "----------------------" << "% marks" << endl << endl;
+        cout << "-------------------------------------" << "Improved by " << diff_of_per_9_10 << "% marks" << "------------------------------------" << endl << endl;
     }
     else
     {
-        cout << "----------------------" << "Decreased by " << diff_of_per_9_10 << "% marks" << "----------------------" << endl << endl;
+        cout << "------------------------------------" << "Decreased by " << diff_of_per_9_10 << "% marks" << "------------------------------------" << endl << endl;
     }
 
     system("pause");
