@@ -14,4 +14,4 @@ This repository contains a collection of C++ programs I have written during my l
 - Conditional statements (if/else, switch)  
 - Loops (for, while, do-while)  
 - Arrays and strings  
-- Functions and recursion  
+- Functions
