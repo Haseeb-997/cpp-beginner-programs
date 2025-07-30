@@ -132,13 +132,13 @@ int main()
         diff_mar_per_sub[i] = differenceMarkspSubject(ninth_marks[i], tenth_marks[i]);
     }
     // Headings
-    cout << left << setw(20) << "Subjects" << setw(17) << "9th Marks" << setw(17) << "10th Marks" << setw(17) << "Obtained Marks" << setw(17) << "Analysis" << endl;
+    cout << left << setw(20) << "Subjects" << setw(17) << "9th Marks" << setw(17) << "10th Marks" << setw(22) << "Obtained Marks" << "Analysis" << endl;
     cout << right << setw(69) << "in each subject" << endl;
     cout << "_____________________________________________________________________________________________" << endl << endl;
     // Contents
     for (int i = 0; i < 8; i++)
     {
-        cout << left << setw(20) << sub[i] << setw(17) << ninth_marks[i] << setw(17) << tenth_marks[i] << setw(17) << tot_mar_per_sub[i];
+        cout << left << setw(20) << sub[i] << setw(17) << ninth_marks[i] << setw(17) << tenth_marks[i] << setw(22) << tot_mar_per_sub[i];
         if (diff_mar_per_sub[i] == 0)
         {
             cout << "No Change" << endl;
