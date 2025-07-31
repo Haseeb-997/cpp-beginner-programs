@@ -13,6 +13,7 @@ int main()
     cars.top() = "Volvo"; // changing top element of stack
     cout << "After changing, car at the top (in the stack) is " << cars.top() << endl;
     cout << "The size of the car stack is " << cars.size() << endl;
+    
     stack<int> numbers;
     numbers.push(10);    
     numbers.push(20);
