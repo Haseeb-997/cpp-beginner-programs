@@ -3,11 +3,6 @@ using namespace std;
 
 // Functions Overloading
 
-// Trapazoid
-float volume(float a, float b, float c)
-{
-    return ((a + b) / 2) * c;
-}
 // Triangle
 float volume(float a, float b)
 {
@@ -19,28 +14,43 @@ float volume(float a)
     return a * a;
 }
 
+int myfunc(int a, int b)
+{
+    return a + b;
+}
+
+string myfunc(string a, string b)
+{
+    return a + b;
+}
+
 int main()
 {
     float side, base, height_tri, up_side, low_side, height_tra;
-    cout << "Volume of Shapes\n\n";
+    int n1, n2;
+    string l_name, f_name;
 
     cout << "Enter the value of side of square: ";
     cin >> side;
-    cout << "The volume of Square (using one argument function) is " << volume(side)<< endl << endl;
+    cout << "The volume of Square (using one argument volume function) is " << volume(side)<< endl << endl;
     
     cout << "Enter the value of base of triangle: ";
     cin >> base;
     cout << "Enter the value of height of triangle: ";
     cin >> height_tri;
-    cout << "The volume of Triangle (using two arguments function) is " << volume(base, height_tri) << endl << endl;
+    cout << "The volume of Triangle (using two arguments volume function) is " << volume(base, height_tri) << endl << endl;
 
-    cout << "Enter the value of upper side of trapazoid: ";
-    cin >> up_side;
-    cout << "Enter the value of lower side of trapazoid: ";
-    cin >> low_side;
-    cout << "Enter the value of height of trapazoid: ";
-    cin >> height_tra;
-    cout << "The volume of Trapazoid (using three arguments function) is " << volume(up_side, low_side, height_tra) << endl << endl;
+    cout << "Enter number 1 (whole number): ";
+    cin >>  n1;   
+    cout << "Enter number 2 (whole number): ";
+    cin >> n2;
+    cout << "The sum of two numbers (using two arguments myfunc function) is " << myfunc(n1, n2) << endl << endl;
+
+    cout << "Enter first name: ";
+    cin >> f_name;
+    cout << "Enter last name: ";
+    cin >> l_name;
+    cout << "The sum of two strings (using two arguments myfunc function) is " << myfunc(f_name, l_name) << endl << endl;
 
     system ("pause");
     return 0;
