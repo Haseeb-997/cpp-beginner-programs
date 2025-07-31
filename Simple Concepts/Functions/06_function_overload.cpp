@@ -26,7 +26,7 @@ string myfunc(string a, string b)
 
 int main()
 {
-    float side, base, height_tri, up_side, low_side, height_tra;
+    float side, base, height_tri;
     int n1, n2;
     string l_name, f_name;
 
