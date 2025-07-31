@@ -3,9 +3,9 @@ using namespace std;
 
 int main()
 {
-    cout << "***Fabonacci Series***" << endl;
+    cout << "***Fibonacci Series***" << endl;
     int F1, F2, F3, N;
-    cout << "Enter the number of terms (must be greater than or equal to 2) you want in fabonacci series: ";
+    cout << "Enter the number of terms (must be greater than or equal to 2) you want in fibonacci series: ";
     cin >> N;
     if (N < 2)
     {
@@ -22,7 +22,7 @@ int main()
             F1 = F2;
             F2 = F3;
         }
-        cout << "\nThis is the required fanbonacci series\n";
+        cout << "\nThis is the required fibonacci series\n";
     }
     
     system("pause");
