@@ -55,7 +55,7 @@ int main()
     {
         std::cout << "Your Grade is E\n";
     }
-    else if (percent >= 0) // 0 to less than 40
+    else // 0 to less than 40
     {
         std::cout << "Your Grade is U\n";
     }
@@ -63,3 +63,4 @@ int main()
     system("pause");
     return 0;
 }
+
