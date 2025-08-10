@@ -3,6 +3,13 @@ using namespace std;
 
 int main()
 {
+    string name, city;
+    cout << "Enter your name: \n";
+    getline(cin, name);
+    cout << "Enter your home city: \n";
+    cin >> city;
+    cout << "\nWelcome Mr. " << name << ". " << "You live in " << city << "." << endl;
+
     string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     cout << txt.length() << endl;
     cout << txt[txt.length() - 1] << endl;
@@ -19,4 +26,5 @@ int main()
 
     system("pause");
     return 0;
+
 }
