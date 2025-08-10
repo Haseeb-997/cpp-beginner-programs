@@ -1,55 +1,63 @@
 #include <iostream>
-using namespace std;
 
 int main()
 {
     float percent;
-    cout << "*****Welcome to the FBISE Grading System*****\n";
-    cout << "Enter your percentage: ";
-    cin >> percent;
-    if ((percent >= 95) && (percent <= 100)) // 95 to 100
+    std::cout << "*****Welcome to the FBISE Grading System*****\n";
+    do
     {
-        cout << "Your Grade is A++" << endl;
+        std::cout << "\nEnter your percentage: ";
+        std::cin >> percent;
+        std::cout << std::endl;
+        if ((percent > 100) || (percent < 0))
+        {
+            std::cout << "Invalid Percentage\nPlease enter correct!\n\n";
+        }
+        else
+        {
+            break;
+        }                
+    } while (1);
+
+    if (percent >= 95) // 95 to 100
+    {
+        std::cout << "Your Grade is A++\n";
     }
-    else if ((percent >= 90) && (percent <= 94)) // 90 to 94
+    else if (percent >= 90) // 90 to less than 95
     {
-        cout << "Your Grade is A+" << endl;
+        std::cout << "Your Grade is A+\n";
     }
-    else if ((percent >= 85) && (percent <= 89)) // 85 to 89
+    else if (percent >= 85) // 85 to less than 90
     {
-        cout << "Your Grade is A" << endl;
+        std::cout << "Your Grade is A\n";
     }
-    else if ((percent >= 80) && (percent <= 84)) // 80 to 84
+    else if (percent >= 80) // 80 to less than 85
     {
-        cout << "Your Grade is B++" << endl;
+        std::cout << "Your Grade is B++\n";
     }
-    else if ((percent >= 75) && (percent <= 79)) // 75 to 79
+    else if (percent >= 75) // 75 to less than 80
     {
-        cout << "Your Grade is B+" << endl;
+        std::cout << "Your Grade is B+\n";
     }
-    else if ((percent >= 70) && (percent <= 74)) // 70 to 74
+    else if (percent >= 70) // 70 to less than 75
     {
-        cout << "Your Grade is B" << endl;
+        std::cout << "Your Grade is B\n";
     }
-    else if ((percent >= 60) && (percent <= 69)) // 60 to 69
+    else if (percent >= 60) // 60 to less than 70
     {
-        cout << "Your Grade is C" << endl;
+        std::cout << "Your Grade is C\n";
     }
-    else if ((percent >= 50) && (percent <= 59)) // 50 to 59
+    else if (percent >= 50) // 50 to less than 60
     {
-        cout << "Your Grade is D" << endl;
+        std::cout << "Your Grade is D\n";
     }
-    else if ((percent >= 40) && (percent <= 49)) // 40 to 49
+    else if (percent >= 40) // 40 to less than 50
     {
-        cout << "Your Grade is E" << endl;
+        std::cout << "Your Grade is E\n";
     }
-    else if ((percent >= 0) && (percent <= 39)) // 0 to 39
+    else if (percent >= 0) // 0 to less than 40
     {
-        cout << "Your Grade is U" << endl;
-    }
-    else
-    {
-        cout << "Invalid Percentage" << endl;
+        std::cout << "Your Grade is U\n";
     }
 
     system("pause");
