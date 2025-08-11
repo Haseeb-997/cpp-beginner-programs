@@ -4,13 +4,7 @@ int main()
 {
     system("cls");
     std::cout << "***Program that tells whether a day is a weekday or weakend***\n";
-    std::cout << "1:\"Monday\"\n";
-    std::cout << "2:\"Tuesday\"\n";
-    std::cout << "3:\"Wednesday\"\n";
-    std::cout << "4:\"Thursday\"\n";
-    std::cout << "5:\"Friday\"\n";
-    std::cout << "6:\"Saturday\"\n";
-    std::cout << "7:\"Sunday\"\n";
+    std::cout << "1:\"Monday\"\n2:\"Tuesday\"\n3:\"Wednesday\"\n4:\"Thursday\"\n5:\"Friday\"\n6:\"Saturday\"\n7:\"Sunday\"\n";
     int day;
     bool day_num;
     do
@@ -37,4 +31,5 @@ int main()
     } while (day_num == 0);
     system("pause");
     return 0;
+
 }
