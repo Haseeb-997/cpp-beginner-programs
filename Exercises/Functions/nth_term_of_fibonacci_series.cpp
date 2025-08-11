@@ -3,18 +3,7 @@ using namespace std;
 
 int fib(int a)
 {
-    if (a == 1)
-    {
-        return 0;
-    }
-    else if (a == 2)
-    {
-        return 1;
-    }
-    else
-    {
-        return fib(a - 1) + fib(a - 2);
-    }
+    return (a == 1) ? 0 : (a == 2) ? 1 : fib(a - 1) + fib(a - 2);
 }
 
 int main()
@@ -39,3 +28,4 @@ int main()
     system("pause");
     return 0;
 }
+
