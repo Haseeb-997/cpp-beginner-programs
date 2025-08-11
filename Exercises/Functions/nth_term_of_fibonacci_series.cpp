@@ -3,29 +3,39 @@ using namespace std;
 
 int fib(int a)
 {
-    if (a < 0)
+    if (a == 1)
     {
         return 0;
     }
-    else if ((a == 0) || (a == 1))
+    else if (a == 2)
     {
         return 1;
     }
-    else return fib(a - 1) + fib(a - 2);
+    else
+    {
+        return fib(a - 1) + fib(a - 2);
+    }
 }
 
 int main()
 {
-    int index;
-    cout << "\nProgram that will tell you the term at given index of \"fibonacci series\"\n\n";
-    cout << "Enter the value of index: ";
-    cin >> index;
-    if (!(fib(index)))
+    cout << "\nProgram that will tell you the nth term of \"fibonacci series\"\n\n";
+    int n;
+    while (true)
     {
-        cout << "Wrong Input" << endl;
-    }
-    else cout << "The term at " << index << " index or " << index + 1 << "th term is " << fib(index) << endl << endl;
+        cout << "Enter the value of n: ";
+        cin >> n;
 
-    system ("pause");
+        if (n <= 0)
+        {
+            cout << "\nInvalid Number!\nEnter a valid number\n\n";
+        }
+        else
+        {
+            cout << "\nThe " << n << " term of Fibonacci Series is " << fib(n) << endl;
+            break;
+        }
+    }
+    system("pause");
     return 0;
 }
