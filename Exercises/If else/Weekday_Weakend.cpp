@@ -24,9 +24,10 @@ int main()
         }
         else
         {
-            std::cout << "\nInvalid Day Number\n\n";
+            std::cout << "\nInvalid Day Number\nEnter a valid number!\n\n";
         }
     } while (true);
     system("pause");
     return 0;
 }
+
