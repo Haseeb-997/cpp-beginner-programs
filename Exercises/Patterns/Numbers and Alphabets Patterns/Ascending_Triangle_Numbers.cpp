@@ -10,7 +10,7 @@ int main()
     1 2 3 4
     */
     int n;
-    cout << "Enter the number: ";
+    cout << "Enter the number of rows: ";
     cin >> n;
     for (int i = 1; i <= n; i++)
     {
@@ -74,4 +74,5 @@ int main()
     }
     cout << endl;
     return 0;
+
 }
