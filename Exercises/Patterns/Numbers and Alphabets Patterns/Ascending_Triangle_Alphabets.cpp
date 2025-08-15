@@ -10,7 +10,7 @@ int main()
     D D D D
     */
     int n;
-    cout << "Enter the number: ";
+    cout << "Enter the number of rows: ";
     cin >> n;
     char ch = 'A';
     for (int i = 1; i <= n; i++)
@@ -78,4 +78,5 @@ int main()
     }
     cout << endl;
     return 0;
+
 }
