@@ -4,29 +4,28 @@ using namespace std;
 int main()
 {
     cout << "***Displaying Prime Factors of a number***\n";
-    int n;
+    int num;
     cout << "Enter the number: ";
-    cin >> n;
-    for (int i = 2; i <= n; i++)
+    cin >> num;
+    int n = num;
+    while (n % 2 == 0)
     {
-        int isPrime = 1;
-        for (int j = 2; j * j <= i; j++)
+        cout << 2 << " ";
+        n = n / 2;
+    }
+    for (int i = 3; i * i <= n; i = i + 2)
+    {
+        while (n % i == 0)
         {
-            if (i % j == 0)
-            {
-                isPrime = 0;
-                break;
-            }
-        }
-        if (isPrime == 1)
-        {
-            if (n % i == 0)
-            {
-                cout << i << " ";
-            }
+            cout << i << " ";
+            n = n / i;
         }
     }
-    cout << "\nAbove are the Prime Factors of " << n << endl;
+    if (n > 2)
+    {
+        cout << n;
+    }
+    cout << "\nAbove are the Prime Factors of " << num << endl;
 
     system("pause");
     return 0;
