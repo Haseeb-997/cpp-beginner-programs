@@ -2,14 +2,36 @@
 #include <iomanip>
 using namespace std;
 
+    // Globle Variables 
+    
+    // Price variables
+    
+    // Breakfast items price
+    // Puri, Halwa
+    int b_1p = 40, b_2p = 80;
+    
+    // Lunch items price
+    // Chicken Korma, Vegetable
+    int l_1p = 300, l_2p = 250;
+    
+    // Fastfood items price
+    // Shawarma, Burger
+    int f_1p = 150, f_2p = 170;
+    
+    // Dinner items price
+    // Daal Chawal, Nehari
+    int d_1p = 100, d_2p = 500;
+
 void breakfast_choice(int bch)
 {
     switch (bch)
     {
     case 1:
+        cout << "\nYou have selected PURI\n\n";
         system("pause");
         break;
     case 2:
+        cout << "\nYou have selected HALWA\n\n";
         system("pause");
         break;
     case 3:
@@ -25,9 +47,11 @@ void lunch_choice(int lch)
     switch (lch)
     {
     case 1:
+        cout << "\nYou have selected CHICKEN KORMA\n\n";
         system("pause");
         break;
     case 2:
+        cout << "\nYou have selected VEGETABLE\n\n";
         system("pause");
         break;
     case 3:
@@ -43,9 +67,11 @@ void fastfood_choice(int fch)
     switch (fch)
     {
     case 1:
+        cout << "\nYou have selected SHAWARMA\n\n";
         system("pause");
         break;
     case 2:
+        cout << "\nYou have selected BURGER\n\n";
         system("pause");
         break;
     case 3:
@@ -61,9 +87,11 @@ void dinner_choice(int dch)
     switch (dch)
     {
     case 1:
+        cout << "\nYou have selected DAAL CHAWAL\n\n";
         system("pause");
         break;
     case 2:
+        cout << "\nYou have selected NEHARI\n\n";
         system("pause");
         break;
     case 3:
@@ -76,6 +104,7 @@ void dinner_choice(int dch)
 
 int main()
 {
+    // Choice variables
     int RCH, BCH, LCH, FCH, DCH;
     do
     {
@@ -91,12 +120,13 @@ int main()
             {
                 system("cls");
                 cout << "********************BREAKFAST********************\n\n";
-                cout << left << setw(30) << "\"ITEMS\"" << setw(30) << "\"PRICES\"" << "\n";
-                cout << setw(30) << "1. PURI" << " Rs.10/-" << "\n"
-                     << setw(30) << "2. HALWA" << " Rs.90/Pao" << "\n"
+                cout << left << setw(45) << "\"ITEMS\"" << "\"PRICES\"" << "\n";
+                cout << setw(45) << "1. PURI" << " Rs." << b_1p << "\n"
+                     << setw(45) << "2. HALWA" << " Rs." << b_2p << "\n"
                      << "3. BACK TO MAIN MENU" << "\n\n";
                 cout << "Enter your choice(1-3): ";
                 cin >> BCH;
+                // Calling Function
                 breakfast_choice(BCH);
             } while (BCH != 3);
             break;
@@ -105,12 +135,13 @@ int main()
             {
                 system("cls");
                 cout << "********************LUNCH********************\n\n";
-                cout << left << setw(30) << "\"ITEMS\"" << setw(30) << "\"PRICES\"" << "\n";
-                cout << setw(30) << "1. CHICKEN KORMA" << " Rs.550/-" << "\n"
-                     << setw(30) << "2. VEGETABLE" << " Rs.250/-" << "\n"
+                cout << left << setw(45) << "\"ITEMS\"" << "\"PRICES\"" << "\n";
+                cout << setw(45) << "1. CHICKEN KORMA" << " Rs." << l_1p << "\n"
+                     << setw(45) << "2. VEGETABLE" << " Rs." << l_2p << "\n"
                      << "3. BACK TO MAIN MENU" << "\n\n";
                 cout << "Enter your choice(1-3): ";
                 cin >> LCH;
+                // Calling Function
                 lunch_choice(LCH);
             } while (LCH != 3);
             break;
@@ -119,12 +150,13 @@ int main()
             {
                 system("cls");
                 cout << "********************FAST FOOD********************\n\n";
-                cout << left << setw(30) << "\"ITEMS\"" << setw(30) << "\"PRICES\"" << "\n";
-                cout << setw(30) << "1. SAHWARMA" << " Rs.200/-" << "\n"
-                     << setw(30) << "2. BURGER" << " Rs.200/-" << "\n"
+                cout << left << setw(45) << "\"ITEMS\"" << "\"PRICES\"" << "\n";
+                cout << setw(45) << "1. SAHWARMA" << " Rs." << f_1p << "\n"
+                     << setw(45) << "2. BURGER" << " Rs." << f_2p << "\n"
                      << "3. BACK TO MAIN MENU" << "\n\n";
                 cout << "Enter your choice(1-3): ";
                 cin >> FCH;
+                // Calling Function
                 fastfood_choice(FCH);
             } while (FCH != 3);
             break;
@@ -133,12 +165,13 @@ int main()
             {
                 system("cls");
                 cout << "********************DINNER********************\n\n";
-                cout << left << setw(30) << "\"ITEMS\"" << setw(30) << "\"PRICES\"" << "\n";
-                cout << setw(30) << "1. DAAL CHAWAL" << " Rs.250/-" << "\n"
-                     << setw(30) << "2. NEHARI" << " Rs.450/-" << "\n"
+                cout << left << setw(45) << "\"ITEMS\"" << "\"PRICES\"" << "\n";
+                cout << setw(45) << "1. DAAL CHAWAL" << " Rs." << d_1p << "\n"
+                     << setw(45) << "2. NEHARI" << " Rs." << d_2p << "\n"
                      << "3. BACK TO MAIN MENU" << "\n\n";
                 cout << "Enter your choice(1-3): ";
                 cin >> DCH;
+                // Calling Function
                 dinner_choice(DCH);
             } while (DCH != 3);
             break;
