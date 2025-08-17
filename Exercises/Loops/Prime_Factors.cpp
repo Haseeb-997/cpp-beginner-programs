@@ -3,6 +3,7 @@ using namespace std;
 
 int main()
 {
+    system("cls");
     cout << "***Displaying Prime Factors of a number***\n";
     int num;
     cout << "Enter the number: ";
@@ -13,7 +14,7 @@ int main()
         cout << 2 << " ";
         n = n / 2;
     }
-    for (int i = 3; i * i <= n; i = i + 2)
+    for (int i = 3; i <= n; i = i + 2)
     {
         while (n % i == 0)
         {
@@ -21,12 +22,6 @@ int main()
             n = n / i;
         }
     }
-    if (n > 2)
-    {
-        cout << n;
-    }
-    cout << "\nAbove are the Prime Factors of " << num << endl;
-
-    system("pause");
+    cout << "\tare the Prime Factors of " << num << endl;
     return 0;
 }
