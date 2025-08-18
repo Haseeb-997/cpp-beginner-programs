@@ -35,6 +35,10 @@ void breakfast_choice(int bch)
         system("pause");
         break;
     case 3:
+        system("cls");
+        cout << "YOU HAVE ORDERED\n\n";
+        system("pause");
+    case 4:
         break;
     default:
         cout << "\nInvalid Input!\nEnter valid one: \n\n";
@@ -55,6 +59,10 @@ void lunch_choice(int lch)
         system("pause");
         break;
     case 3:
+        system("cls");
+        cout << "YOU HAVE ORDERED\n\n";
+        system("pause");
+    case 4:
         break;
     default:
         cout << "\nInvalid Input!\nEnter valid one\n\n";
@@ -75,6 +83,10 @@ void fastfood_choice(int fch)
         system("pause");
         break;
     case 3:
+        system("cls");
+        cout << "YOU HAVE ORDERED\n\n";
+        system("pause");
+    case 4:
         break;
     default:
         cout << "\nInvalid Input!\nEnter valid one\n\n";
@@ -95,6 +107,10 @@ void dinner_choice(int dch)
         system("pause");
         break;
     case 3:
+        system("cls");
+        cout << "YOU HAVE ORDERED\n\n";
+        system("pause");
+    case 4:
         break;
     default:
         cout << "\nInvalid Input!\nEnter valid one\n\n";
@@ -123,12 +139,13 @@ int main()
                 cout << left << setw(45) << "\"ITEMS\"" << "\"PRICES\"" << "\n";
                 cout << setw(45) << "1. PURI" << " Rs." << b_1p << "\n"
                      << setw(45) << "2. HALWA" << " Rs." << b_2p << "\n"
-                     << "3. BACK TO MAIN MENU" << "\n\n";
-                cout << "Enter your choice(1-3): ";
+                     << "3. YOUR ORDER\n"
+                     << "4. BACK TO MAIN MENU\n\n";
+                cout << "Enter your choice(1-4): ";
                 cin >> BCH;
                 // Calling Function
                 breakfast_choice(BCH);
-            } while (BCH != 3);
+            } while (BCH != 4);
             break;
         case 2:
             do
@@ -138,12 +155,13 @@ int main()
                 cout << left << setw(45) << "\"ITEMS\"" << "\"PRICES\"" << "\n";
                 cout << setw(45) << "1. CHICKEN KORMA" << " Rs." << l_1p << "\n"
                      << setw(45) << "2. VEGETABLE" << " Rs." << l_2p << "\n"
-                     << "3. BACK TO MAIN MENU" << "\n\n";
-                cout << "Enter your choice(1-3): ";
+                     << "3. YOUR ORDER\n"
+                     << "4. BACK TO MAIN MENU\n\n";
+                cout << "Enter your choice(1-4): ";
                 cin >> LCH;
                 // Calling Function
                 lunch_choice(LCH);
-            } while (LCH != 3);
+            } while (LCH != 4);
             break;
         case 3:
             do
@@ -153,12 +171,13 @@ int main()
                 cout << left << setw(45) << "\"ITEMS\"" << "\"PRICES\"" << "\n";
                 cout << setw(45) << "1. SAHWARMA" << " Rs." << f_1p << "\n"
                      << setw(45) << "2. BURGER" << " Rs." << f_2p << "\n"
-                     << "3. BACK TO MAIN MENU" << "\n\n";
-                cout << "Enter your choice(1-3): ";
+                     << "3. YOUR ORDER\n"
+                     << "4. BACK TO MAIN MENU\n\n";
+                cout << "Enter your choice(1-4): ";
                 cin >> FCH;
                 // Calling Function
                 fastfood_choice(FCH);
-            } while (FCH != 3);
+            } while (FCH != 4);
             break;
         case 4:
             do
@@ -168,12 +187,13 @@ int main()
                 cout << left << setw(45) << "\"ITEMS\"" << "\"PRICES\"" << "\n";
                 cout << setw(45) << "1. DAAL CHAWAL" << " Rs." << d_1p << "\n"
                      << setw(45) << "2. NEHARI" << " Rs." << d_2p << "\n"
-                     << "3. BACK TO MAIN MENU" << "\n\n";
-                cout << "Enter your choice(1-3): ";
+                     << "3. YOUR ORDER\n"
+                     << "4. BACK TO MAIN MENU\n\n";
+                cout << "Enter your choice(1-4): ";
                 cin >> DCH;
                 // Calling Function
                 dinner_choice(DCH);
-            } while (DCH != 3);
+            } while (DCH != 4);
             break;
         case 5:
             break;
