@@ -8,7 +8,7 @@ int main()
     {
         std::cout << "Enter the year: ";
         std::cin >> year;
-        if (year > 0)
+        if (year > 1582)
         {
             if (year % 4 == 0)
             {
@@ -38,4 +38,5 @@ int main()
         }
     }
     return 0;
+
 }
